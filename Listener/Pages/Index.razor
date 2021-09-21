@@ -1,0 +1,13 @@
+﻿@page "/"
+@inject IJSRuntime Js
+
+<h1>Listener App</h1>
+
+<p>声を出してYMNKさんの位置を変えてみよう</p>
+<p>つかえるコマンド:</p>
+<p>　　方向: @foreach (var s in _directionKeys) { <span>@s, </span>}</p>
+<p>　　程度: @foreach (var s in _gainKeys) { <span>@s, </span>}</p>
+<p>入力音声テキスト → @_text</p>
+<div style="width: 100%; height: 50%;">
+    <img src="/ymnk_2.jpg" style="position: relative; left: @_positionLeft; top:@_positionTop;" />
+</div>
